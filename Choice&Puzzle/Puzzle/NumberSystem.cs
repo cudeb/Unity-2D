@@ -185,7 +185,7 @@ public class NumberSystem : MonoBehaviour
     }
     IEnumerator ExitCoroutine()
     {
-        //Debug.Log("À¯Àú°¡ ÀÛ¼ºÇÑ ´ä : " + result + " Á¤´ä : " + correctNumber);
+        //Debug.Log("Ã€Â¯Ã€ÃºÂ°Â¡ Ã€Ã›Â¼ÂºÃ‡Ã‘ Â´Ã¤ : " + result + " ÃÂ¤Â´Ã¤ : " + correctNumber);
         result = 0;
         tempNumber = "";
         anim.SetBool("Appear", false);

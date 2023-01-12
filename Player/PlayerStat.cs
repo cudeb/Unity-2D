@@ -60,7 +60,7 @@ public class PlayerStat : MonoBehaviour
 
         if(currentHP <= 0)
         {
-            Debug.Log("Ã¼·Â 0 ¹Ì¸¸, °ÔÀÓ¿À¹ö");
+            Debug.Log("ÃƒÂ¼Â·Ã‚ 0 Â¹ÃŒÂ¸Â¸, Â°Ã”Ã€Ã“Â¿Ã€Â¹Ã¶");
         }
 
         AudioManager.instance.Play(dmgSound);

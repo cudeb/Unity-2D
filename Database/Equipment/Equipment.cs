@@ -250,7 +250,7 @@ public class Equipment : MonoBehaviour
                     {
                         theAudio.Play(enter_sound);
                         inputKey = false;
-                        StartCoroutine(OOCCoroutine("¹þ±â", "Ãë¼Ò"));
+                        StartCoroutine(OOCCoroutine("Â¹Ã¾Â±Ã¢", "ÃƒÃ«Â¼Ã’"));
                     }
                 }
             }

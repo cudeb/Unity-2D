@@ -7,7 +7,7 @@ public class Menu : MonoBehaviour
 {
     public static Menu instance;
 
-    private void Awake()    //part 11 �ʹݺ� ������Ʈ 3
+    private void Awake()    //part 11 ÃÊ¹ÝºÎ ¼öÁ¤ÆÄÆ® 3
     {
         if (instance == null)
         {

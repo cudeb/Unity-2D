@@ -90,7 +90,7 @@ public class SaveNLoad : MonoBehaviour
         data.mapName = thePlayer.currentMapName;
         data.sceneName = thePlayer.currentSceneName;
 
-        Debug.Log("±âÃÊ µ¥ÀÌÅÍ ÀÔ·Â ¼º°ø");
+        Debug.Log("ê¸°ì´ˆ ë°ì´í„° ì…ë ¥ ì„±ê³µ");
 
         data.playerItemInventory.Clear();
         data.playerItemInventoryCount.Clear();
@@ -111,7 +111,7 @@ public class SaveNLoad : MonoBehaviour
         List<Item> itemList = theInven.SaveItem();
         for(int i=0;i<itemList.Count;i++)
         {
-            Debug.Log("ÀÎº¥Åä¸® ¾ÆÀÌÅÛ ÀúÀå ¿Ï·á:" + itemList[i].itemID);
+            Debug.Log("ì¸ë²¤í† ë¦¬ ì•„ì´í…œ ì €ì¥ ì™„ë£Œ:" + itemList[i].itemID);
             data.playerItemInventory.Add(itemList[i].itemID);
             data.playerItemInventoryCount.Add(itemList[i].itemCount);
         }
@@ -119,7 +119,7 @@ public class SaveNLoad : MonoBehaviour
         for(int i=0;i<theEquip.equipItemList.Length;i++)
         {
             data.playerEquipItem.Add(theEquip.equipItemList[i].itemID);
-            Debug.Log("ÀåÂøµÈ ¾ÆÀÌÅÛ ÀúÀå ¿Ï·á" + theEquip.equipItemList[i].itemID);
+            Debug.Log("ì¥ì°©ëœ ì•„ì´í…œ ì €ì¥ ì™„ë£Œ" + theEquip.equipItemList[i].itemID);
         }
 
         BinaryFormatter bf = new BinaryFormatter();
@@ -128,7 +128,7 @@ public class SaveNLoad : MonoBehaviour
         bf.Serialize(file,data);
         file.Close();
 
-        Debug.Log(Application.dataPath + "ÀÇ À§Ä¡¿¡ ÀúÀåÇß½À´Ï´Ù");
+        Debug.Log(Application.dataPath + "ì˜ ìœ„ì¹˜ì— ì €ì¥í–ˆìŠµë‹ˆë‹¤");
     }
 
     public void CallLoad()
@@ -185,7 +185,7 @@ public class SaveNLoad : MonoBehaviour
                     {
                         theEquip.equipItemList[i] = theDatabase.itemList[x];
                         found = true;
-                        Debug.Log("ÀåÂøµÈ ¾ÆÀÌÅÛÀ» ·ÎµåÇß½À´Ï´Ù:" + theEquip.equipItemList[i].itemID);
+                        Debug.Log("ì¥ì°©ëœ ì•„ì´í…œì„ ë¡œë“œí–ˆìŠµë‹ˆë‹¤:" + theEquip.equipItemList[i].itemID);
                         break;
                     }
                 }
@@ -208,7 +208,7 @@ public class SaveNLoad : MonoBehaviour
                     if (data.playerItemInventory[i] == theDatabase.itemList[x].itemID)
                     {
                         itemList.Add(theDatabase.itemList[x]);
-                        Debug.Log("ÀÎº¥Åä¸® ¾ÆÀÌÅÛÀ» ·ÎµåÇß½À´Ï´Ù:" + theDatabase.itemList[x].itemID);
+                        Debug.Log("ì¸ë²¤í† ë¦¬ ì•„ì´í…œì„ ë¡œë“œí–ˆìŠµë‹ˆë‹¤:" + theDatabase.itemList[x].itemID);
                         break;
                     }
                 }
@@ -226,7 +226,7 @@ public class SaveNLoad : MonoBehaviour
         }
         else
         {
-            Debug.Log("ÀúÀåµÈ ¼¼ÀÌºê ÆÄÀÏÀÌ ¾ø½À´Ï´Ù.");
+            Debug.Log("ì €ì¥ëœ ì„¸ì´ë¸Œ íŒŒì¼ì´ ì—†ìŠµë‹ˆë‹¤.");
         }
         file.Close();
     }

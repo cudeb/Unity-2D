@@ -46,7 +46,7 @@ public class Inventory : MonoBehaviour
     private bool tabActivated;
     private bool itemActivated;
     private bool stopKeyInput;
-    private bool preventExec;  //GetKey ÀÏ ¶§ µ¿½Ã ½ÇÇà ¹æÁö
+    private bool preventExec;  //GetKey ì¼ ë•Œ ë™ì‹œ ì‹¤í–‰ ë°©ì§€
 
     private WaitForSeconds waitTime = new WaitForSeconds(0.01f);
 
@@ -87,7 +87,7 @@ public class Inventory : MonoBehaviour
             {
 
                 var clone = Instantiate(prefab_Floating_Text, PlayerManager.instance.transform.position,Quaternion.Euler(Vector3.zero));
-                clone.GetComponent<FloatingText>().text.text = theDatabase.itemList[i].itemName + " " + _count + "°³ È¹µæ +";
+                clone.GetComponent<FloatingText>().text.text = theDatabase.itemList[i].itemName + " " + _count + "ê°œ íšë“ +";
                 clone.transform.SetParent(this.transform);
                 for(int j=0;j<inventoryItemList.Count;j++)
                 {
@@ -97,7 +97,7 @@ public class Inventory : MonoBehaviour
                         {
                             inventoryItemList[j].itemCount += _count;
                         }
-                        else  //part 25 > ÀåºñÃ¢µµ Ãß°¡ ¹ö±×ÇÈ½º
+                        else  //part 25 > ì¥ë¹„ì°½ë„ ì¶”ê°€ ë²„ê·¸í”½ìŠ¤
                         {
                             for (int k = 0; k < _count; k++)
                             {
@@ -112,7 +112,7 @@ public class Inventory : MonoBehaviour
                     inventoryItemList.Add(theDatabase.itemList[i]);
                     inventoryItemList[inventoryItemList.Count - 1].itemCount = _count;
                 }
-                else   //part 25 > ÀåºñÃ¢µµ Ãß°¡ ¹ö±×ÇÈ½º
+                else   //part 25 > ì¥ë¹„ì°½ë„ ì¶”ê°€ ë²„ê·¸í”½ìŠ¤
                 {
                     for (int j = 0; j < _count; j++)
                     {
@@ -122,7 +122,7 @@ public class Inventory : MonoBehaviour
                 return;
             }
         }
-        Debug.LogError("µ¥ÀÌÅÍº£ÀÌ½º¿¡ ÇØ´ç ID°ªÀ» °¡Áø ¾ÆÀÌÅÛÀÌ Á¸ÀçÇÏÁö ¾Ê½À´Ï´Ù.");
+        Debug.LogError("ë°ì´í„°ë² ì´ìŠ¤ì— í•´ë‹¹ IDê°’ì„ ê°€ì§„ ì•„ì´í…œì´ ì¡´ì¬í•˜ì§€ ì•ŠìŠµë‹ˆë‹¤.");
     }
 
     public void ShowTab()
@@ -256,7 +256,7 @@ public class Inventory : MonoBehaviour
         }
         else
         {
-            Description_Text.text = "ÇØ´ç Å¸ÀÔÀÇ ¾ÆÀÌÅÛÀ» ¼ÒÀ¯ÇÏ°í ÀÖÁö ¾Ê½À´Ï´Ù.";
+            Description_Text.text = "í•´ë‹¹ íƒ€ì…ì˜ ì•„ì´í…œì„ ì†Œìœ í•˜ê³  ìˆì§€ ì•ŠìŠµë‹ˆë‹¤.";
         }
     }
 
@@ -473,11 +473,11 @@ public class Inventory : MonoBehaviour
                         {
                             if (selectedTab == 0)
                             {
-                                StartCoroutine(OOCCoroutine("»ç¿ë","Ãë¼Ò"));
+                                StartCoroutine(OOCCoroutine("ì‚¬ìš©","ì·¨ì†Œ"));
                             }
                             else if (selectedTab == 1)
                             { 
-                                StartCoroutine(OOCCoroutine("ÀåÂø","Ãë¼Ò"));
+                                StartCoroutine(OOCCoroutine("ì¥ì°©","ì·¨ì†Œ"));
                             }
                             else
                             {

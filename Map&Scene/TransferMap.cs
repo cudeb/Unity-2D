@@ -19,7 +19,7 @@ public class TransferMap : MonoBehaviour
     public string direction;
     private Vector2 vector;
 
-    [Tooltip("¹®ÀÌ ÀÖÀ¸¸é true, ¹®ÀÌ ¾øÀ¸¸é false")]
+    [Tooltip("Â¹Â®Ã€ÃŒ Ã€Ã–Ã€Â¸Â¸Ã© true, Â¹Â®Ã€ÃŒ Â¾Ã¸Ã€Â¸Â¸Ã© false")]
     public bool door;
 
     private PlayerManager thePlayer;

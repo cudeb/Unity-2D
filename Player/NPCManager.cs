@@ -5,12 +5,12 @@ using UnityEngine;
 [System.Serializable]
 public class NPCMove
 {
-    [Tooltip("NPCMove¸¦ Ã¼Å©ÇÏ¸é NPC°¡ ¿òÁ÷ÀÓ.")]
+    [Tooltip("NPCMoveë¥¼ ì²´í¬í•˜ë©´ NPCê°€ ì›€ì§ì„.")]
     public bool NPCmove;
 
     public string[] direction;
 
-    [Range(1,5)] [Tooltip("1 = ÃµÃµÈ÷, 2 = Á¶±İ ÃµÃµÈ÷, 3 = º¸Åë, 4 = ºü¸£°Ô, 5 = ¸Å¿ì ºü¸£°Ô")]
+    [Range(1,5)] [Tooltip("1 = ì²œì²œíˆ, 2 = ì¡°ê¸ˆ ì²œì²œíˆ, 3 = ë³´í†µ, 4 = ë¹ ë¥´ê²Œ, 5 = ë§¤ìš° ë¹ ë¥´ê²Œ")]
     public int frequency;
 }
 public class NPCManager : MovingObject
@@ -25,12 +25,12 @@ public class NPCManager : MovingObject
     }
     public void SetMove()
     {
-        StartCoroutine(MoveCoroutine());    //part11 ÃÊ¹İºÎ ¼öÁ¤ÆÄÆ® 1
+        StartCoroutine(MoveCoroutine());    //part11 ì´ˆë°˜ë¶€ ìˆ˜ì •íŒŒíŠ¸ 1
     }
 
     public void SetNotMove()
     {
-        StopAllCoroutines();  //part11 ÃÊ¹İºÎ ¼öÁ¤ÆÄÆ® 2
+        StopAllCoroutines();  //part11 ì´ˆë°˜ë¶€ ìˆ˜ì •íŒŒíŠ¸ 2
     }
 
     IEnumerator MoveCoroutine()

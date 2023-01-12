@@ -72,16 +72,16 @@ public class DatabaseManager : MonoBehaviour
     void Start()
     {
         thePlayerStat = FindObjectOfType<PlayerStat>();
-        itemList.Add(new Item(10001, "»¡°£ Æ÷¼Ç", "Ã¼·ÂÀ» 50 È¸º¹½ÃÄÑÁÖ´Â ±âÀûÀÇ ¹°¾à", Item.ItemType.Use));
-        itemList.Add(new Item(10002, "ÆÄ¶õ Æ÷¼Ç", "¸¶³ª¸¦ 15 È¸º¹½ÃÄÑÁÖ´Â ±âÀûÀÇ ¹°¾à", Item.ItemType.Use));
-        itemList.Add(new Item(10003, "³óÃà »¡°£ Æ÷¼Ç", "Ã¼·ÂÀ» 350 Ã¤¿öÁÖ´Â ±âÀûÀÇ ³óÃà ¹°¾à", Item.ItemType.Use));
-        itemList.Add(new Item(10004, "³óÃà ÆÄ¶õ Æ÷¼Ç", "¸¶³ª¸¦ 80 Ã¤¿öÁÖ´Â ±âÀûÀÇ ³óÃà ¹°¾à", Item.ItemType.Use));
-        itemList.Add(new Item(11001, "·£´ı »óÀÚ", "·£´ıÀ¸·Î Æ÷¼ÇÀÌ ³ª¿Â´Ù, ³·Àº È®·ü·Î ²Î", Item.ItemType.Use));
-        itemList.Add(new Item(20001, "ÂªÀº °Ë", "±âº»ÀûÀÎ ¿ë»çÀÇ °Ë", Item.ItemType.Equip, 3));
-        itemList.Add(new Item(20301, "»çÆÄÀÌ¾î ¹İÁö", "1ºĞ¿¡ ¸¶³ª 1À» È¸º¹½ÃÄÑÁÖ´Â ¸¶¹ı ¹İÁö", Item.ItemType.Equip, 0, 0, 1));
-        itemList.Add(new Item(30001, "°í´ë À¯¹°ÀÇ Á¶°¢ 1", "¹İÀ¸·Î ÂÉ°³Áø °í´ë À¯¹°ÀÇ ÆÄÆí", Item.ItemType.Quest));
-        itemList.Add(new Item(30002, "°í´ë À¯¹°ÀÇ Á¶°¢ 2", "¹İÀ¸·Î ÂÉ°³Áø °í´ë À¯¹°ÀÇ ÆÄÆí", Item.ItemType.Quest));
-        itemList.Add(new Item(30003, "°í´ë À¯¹°", "°í´ë À¯Àû¿¡ Àáµé¾ú´ø °í´ëÀÇ À¯¹°", Item.ItemType.Quest));
+        itemList.Add(new Item(10001, "ë¹¨ê°„ í¬ì…˜", "ì²´ë ¥ì„ 50 íšŒë³µì‹œì¼œì£¼ëŠ” ê¸°ì ì˜ ë¬¼ì•½", Item.ItemType.Use));
+        itemList.Add(new Item(10002, "íŒŒë€ í¬ì…˜", "ë§ˆë‚˜ë¥¼ 15 íšŒë³µì‹œì¼œì£¼ëŠ” ê¸°ì ì˜ ë¬¼ì•½", Item.ItemType.Use));
+        itemList.Add(new Item(10003, "ë†ì¶• ë¹¨ê°„ í¬ì…˜", "ì²´ë ¥ì„ 350 ì±„ì›Œì£¼ëŠ” ê¸°ì ì˜ ë†ì¶• ë¬¼ì•½", Item.ItemType.Use));
+        itemList.Add(new Item(10004, "ë†ì¶• íŒŒë€ í¬ì…˜", "ë§ˆë‚˜ë¥¼ 80 ì±„ì›Œì£¼ëŠ” ê¸°ì ì˜ ë†ì¶• ë¬¼ì•½", Item.ItemType.Use));
+        itemList.Add(new Item(11001, "ëœë¤ ìƒì", "ëœë¤ìœ¼ë¡œ í¬ì…˜ì´ ë‚˜ì˜¨ë‹¤, ë‚®ì€ í™•ë¥ ë¡œ ê½", Item.ItemType.Use));
+        itemList.Add(new Item(20001, "ì§§ì€ ê²€", "ê¸°ë³¸ì ì¸ ìš©ì‚¬ì˜ ê²€", Item.ItemType.Equip, 3));
+        itemList.Add(new Item(20301, "ì‚¬íŒŒì´ì–´ ë°˜ì§€", "1ë¶„ì— ë§ˆë‚˜ 1ì„ íšŒë³µì‹œì¼œì£¼ëŠ” ë§ˆë²• ë°˜ì§€", Item.ItemType.Equip, 0, 0, 1));
+        itemList.Add(new Item(30001, "ê³ ëŒ€ ìœ ë¬¼ì˜ ì¡°ê° 1", "ë°˜ìœ¼ë¡œ ìª¼ê°œì§„ ê³ ëŒ€ ìœ ë¬¼ì˜ íŒŒí¸", Item.ItemType.Quest));
+        itemList.Add(new Item(30002, "ê³ ëŒ€ ìœ ë¬¼ì˜ ì¡°ê° 2", "ë°˜ìœ¼ë¡œ ìª¼ê°œì§„ ê³ ëŒ€ ìœ ë¬¼ì˜ íŒŒí¸", Item.ItemType.Quest));
+        itemList.Add(new Item(30003, "ê³ ëŒ€ ìœ ë¬¼", "ê³ ëŒ€ ìœ ì ì— ì ë“¤ì—ˆë˜ ê³ ëŒ€ì˜ ìœ ë¬¼", Item.ItemType.Quest));
     }
 
 }

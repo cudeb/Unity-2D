@@ -28,7 +28,7 @@ public class PlayerManager : MovingObject
     public float attackDelay;
     private float currentAttackDelay;
 
-    private void Awake()    //part 11 ÃÊ¹ÝºÎ ¼öÁ¤ÆÄÆ® 3
+    private void Awake()    //part 11 ì´ˆë°˜ë¶€ ìˆ˜ì •íŒŒíŠ¸ 3
     {
         if (instance == null)
         {
@@ -42,7 +42,7 @@ public class PlayerManager : MovingObject
     }
 
     // Start is called before the first frame update
-    void Start()  //part 11 ÃÊ¹ÝºÎ ¼öÁ¤ÆÄÆ® 4
+    void Start()  //part 11 ì´ˆë°˜ë¶€ ìˆ˜ì •íŒŒíŠ¸ 4
     {
         queue = new Queue<string>();
         boxCollider = GetComponent<BoxCollider2D>();
